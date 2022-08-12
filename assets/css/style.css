@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto+Slab:wght@400;700&display=swap');
+
+
+:root{
+    --danger:#da4453;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-decoration: none;
+    list-style:none;
+    color: #6B6B6B;
+}
+body{
+    background-color: #F2F2F2;
+    word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    font-size: 14px;
+}
+.container{
+   /* border: #004d4d 2px solid; */
+    width: 60%;
+    margin: 0 auto;
+    
+}
+
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #363636;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    z-index: 999;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .text-logo a{
+    font-family: 'Roboto Slab', serif;
+    font-size:20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #dadada;
+}
+header .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .navbar li{
+    padding: 0px 15px;
+}
+header .navbar > li > a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 500;
+    color: #F5F7FA;
+    text-transform: uppercase;
+}
+header  .navbar li a:hover{
+    transition: 0.3s;
+    color:var(--danger) ;
+}
+header .navbar .active{
+    color:var(--danger) ;
+}
+
+main .banner{
+    height: 62.8vh;
+    position: relative;
+    top: 70px;
+    background-image: url(../img/banner.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    animation: slider 30s infinite;
+}
+@keyframes slider{
+50%{
+    background-image: url(../img/banner1.png);
+}
+100%{
+    background-image: url(../img/banner2.jpg);
+}
+}
+main .textline{
+    width: 28%;
+    position: absolute;
+    top: 67%;
+    left: 20%;
+}
+main .textline h2{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 36px;
+    padding: 10px;
+    color: #ffffff;
+   background-color:  rgba(218, 68, 83, 0.6);
+}
+main .textline h2:hover{
+cursor: pointer;
+background-color: #363636;
+}
+main .textline p{
+    width: 98%;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px;
+    color: #dddddd;
+    background: rgba(59, 59, 59, 0.8);
+}
+section{
+    margin: 0 auto;
+    margin-top: 70px;
+    background: #FFF;
+    border-bottom: #ddcece solid 1px;
+
+
+     display: grid;
+     justify-content: center;
+     align-content: center;
+     grid-auto-flow: column;
+}
+.grid-item{
+   
+    padding: 20px;
+}
+section .grid-item span{
+    padding-right: 110px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    line-height: 37px;
+    font-weight: 400;
+    color: #da4453;
+}
+section .grid-item button{
+    width: 195px;
+    height: 56px;
+    padding: 15px 0px;
+    background-color: #ffffff;
+    border: 1px solid #da4453;
+    border-radius: 5px;
+    color: #da4453;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+section .grid-item button:hover{
+    border: none;
+    background-color: #da4453;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+/* ARTICLE CONTAINER */
+article .container{
+    margin-top:50px;
+    /* border: 3px solid red; */
+}
+
+.grid {
+    
+    display: grid;
+    grid-template-columns: repeat( 1fr);
+    grid-gap: 30px;
+}
+.span-col-4{
+    grid-column: span 4 / auto;
+    background-color: teal;
+    color: black;
+}
+
+.span-col-3{
+    grid-column: span 3 / auto;
+    color: wheat;
+}
+
+.span-row-51{
+    width: 752px;
+    grid-row: span 25 / auto;
+    border: #C1C0C0 1px solid;
+    background-color: #fff;
+    color: wheat;
+}
+
+.first img:hover, 
+.second img:hover,
+ .third img:hover,
+ .fourth img:hover,
+ .fifth img:hover,
+ .sixth img:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+article .container .grid .first h2 a,
+article .container .grid .second h2 a,
+article .container .grid .third h2 a,
+article .container .grid .third .titles span,
+article .container .grid .fourth h2 a,
+article .container .grid .fifth h2 a,
+article .container .grid .fifth .titles span,
+article .container .grid .sixth h2 a,
+article .container .grid .sixth .titles span{
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-left: 50px;
+    color: #444;
+ }
+ article .container .grid .first h2 a:hover,
+ article .container .grid .second h2 a:hover,
+ article .container .grid .third h2 a:hover,
+ article .container .grid .fourth h2 a:hover,
+ article .container .grid .fifth h2 a:hover,
+ article .container .grid .third .titles span:hover,
+ article .container .grid .fifth .titles span:hover,
+ article .container .grid .sixth h2 a:hover,
+ article .container .grid .sixth .titles span:hover{
+    cursor: pointer;
+    color: #da4453;
+ }
+ article .container .grid .first .icon span,
+ article .container .grid .second .icon span, 
+ article .container .grid .third .icon span,
+ article .container .grid .fourth .icon span,
+ article .container .grid .fifth .icon span,
+ article .container .grid .sixth .icon span{ 
+    line-height: 80px;
+    padding-left: 50px;
+     color: #6B6B6B;
+ }
+ article .container .grid .first p,
+ article .container .grid .second p,
+ article .container .grid .third p,
+ article .container .grid .fourth p,
+ article .container .grid .fifth P,
+ article .container .grid .sixth p{
+    width: 720px;
+    height: 130px;
+    padding: 10px;
+    padding-left: 50px;
+
+ }
+
+ article .container .grid .first  button,
+ article .container .grid .second  button,
+ article .container .grid .third  button,
+ article .container .grid .fourth button,
+ article .container .grid .fifth button,
+ article .container .grid .sixth button{
+    height: 40px;
+    padding: 11px 13px;
+    font-size: 12px;
+    margin-bottom: 70px;
+    margin-left: 600px;
+    border: none;
+    color: #fff;
+    background-color:#da4453 ;
+    border-radius:4px;
+    text-transform: uppercase;
+ }
+ article .container .grid .second button:hover,
+ article .container .grid .first button:hover,
+ article .container .grid .third button:hover,
+ article .container .grid .fourth button:hover,
+ article .container .grid .fifth button:hover,
+ article .container .grid .sixth button:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #333;
+ } 
+ /* Aside --------------------------------------------------------------------------------------- ASIDE */
+ 
+ /* ASIDE */
+.aside-span-row-50{
+    width:  380px;
+    grid-row: span 70 / auto;
+    background-color: #fff;
+    border: #C1C0C0 solid 1px ;
+}
+ article .container .aside-span-row-50 .categories-title .title-categories,
+ article .container .aside-span-row-50 .text-h3{
+    margin: 0 auto;
+    width:80%;
+}
+ article .container .aside-span-row-50 h3{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #636467;
+}
+/*Icons start*/
+article .container .aside-span-row-50 .icons-social{
+    width: 298px;
+    height: 55px;
+    font-size: 38px;
+    margin-left: 35px;
+    color: #999;
+}
+article .container .aside-span-row-50 .icons-social i{color: #C1C0C0;}
+article .container .aside-span-row-50 .icons-social .fa-square-twitter:hover{
+    transition: 1s;
+    color:rgba(6,147,227,1);
+}article .container .aside-span-row-50 .icons-social .fa-square-facebook:hover{
+    transition: 1s;
+    color:rgb(40,116,252);
+    
+}article .container .aside-span-row-50 .icons-social .fa-youtube:hover{
+    transition: 1s;
+    color: rgb(207,46,46);
+}
+article .container .aside-span-row-50 .icons-social .fa-google-plus-g:hover{
+    transition: 1s;
+    color: rgb(254,45,45);
+    
+}
+article .container .aside-span-row-50 .icons-social .fa-square-github:hover{
+    transition: 1s;
+    color: #007aff;
+}/* Icon End*/
+
+
+
+
+
+/*Title wraper*/
+.aside-span-row-50 .popular-post .title{
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    width:80%;
+}
+
+.aside-span-row-50 .popular-wraper .post{
+    margin: 0 auto;
+    width:80%;
+    
+    display: grid;
+    grid: 100px / auto auto auto;
+    grid-gap: 10px;
+        
+}
+
+.aside-span-row-50 .popular-wraper .post .post-image a img{
+    position: relative;
+    top: 32px;
+    right: 12px;
+    border-radius: 3px;
+}
+.aside-span-row-50 .popular-wraper .post .post-image a img:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.aside-span-row-50 .popular-wraper .post .post-content a{
+position: relative;
+color: #da4453;
+top: 32px;
+}
+.aside-span-row-50 .popular-wraper .post .post-content a:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    color:#C1C0C0;
+}
+.date{
+    position: relative;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    top: 30px;
+    color: #C1C0C0;
+}
+.aside-span-row-50 .categories-list .list-categories hr{
+    width: 280px;
+}
+.aside-span-row-50 .categories-list .list-categories span{
+    margin-left: 170px;
+}
+.aside-span-row-50 .categories-list .list-categories .dy{
+    margin-left: 162px;
+}
+.aside-span-row-50 .categories-list .list-categories .tre{
+    margin-left: 195px;
+}
+.aside-span-row-50 .categories-list .list-categories .kater{
+    margin-left: 210px;
+}
+.aside-span-row-50 .categories-list .list-categories .pes{
+    margin-left: 194px;
+}.aside-span-row-50 .categories-list .list-categories .gjashte{
+    margin-left: 224px;
+}.aside-span-row-50 .categories-list .list-categories .shtate{
+    margin-left: 221px;
+}.aside-span-row-50 .categories-list .list-categories .tete{
+    margin-left: 202px;
+}
+.aside-span-row-50 .categories-list .list-categories{
+margin: 0 auto;
+width:80%;
+line-height: 35px;
+}
